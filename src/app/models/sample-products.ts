@@ -1,0 +1,148 @@
+import { Product } from './product-type';
+
+export const SAMPLE_PRODUCTS: Product[] = [
+  {
+    id: '1',
+    name: 'Wireless Noise-Cancelling Headphones',
+    description:
+      'Premium over-ear headphones with active noise cancellation, 30-hour battery life, and studio-quality sound.',
+    price: 299.99,
+    imageUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80',
+    rating: 4.7,
+    reviewCount: 1243,
+    inStock: true,
+    category: 'electronics',
+  },
+  {
+    id: '2',
+    name: 'Minimalist Leather Watch',
+    description:
+      'Slim analog watch with genuine leather strap, sapphire crystal glass, and Japanese quartz movement.',
+    price: 189.0,
+    imageUrl: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80',
+    rating: 4.5,
+    reviewCount: 872,
+    inStock: true,
+    category: 'accessories',
+  },
+  {
+    id: '3',
+    name: 'Running Sneakers',
+    description:
+      'Lightweight performance running shoes with responsive cushioning and breathable mesh upper.',
+    price: 129.95,
+    imageUrl: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80',
+    rating: 4.6,
+    reviewCount: 2105,
+    inStock: true,
+    category: 'footwear',
+  },
+  {
+    id: '4',
+    name: 'Ceramic Pour-Over Coffee Set',
+    description:
+      'Hand-crafted ceramic pour-over dripper with matching mug and stainless steel gooseneck kettle.',
+    price: 74.5,
+    imageUrl: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80',
+    rating: 4.8,
+    reviewCount: 538,
+    inStock: true,
+    category: 'kitchen',
+  },
+  {
+    id: '5',
+    name: 'Mechanical Keyboard',
+    description:
+      'Compact 75% layout mechanical keyboard with tactile switches, RGB backlighting, and aluminum frame.',
+    price: 159.0,
+    imageUrl: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&q=80',
+    rating: 4.4,
+    reviewCount: 964,
+    inStock: false,
+    category: 'electronics',
+  },
+  {
+    id: '6',
+    name: 'Linen Tote Bag',
+    description:
+      'Eco-friendly natural linen tote with interior pocket, reinforced handles, and zipper closure.',
+    price: 39.99,
+    imageUrl: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80',
+    rating: 4.3,
+    reviewCount: 317,
+    inStock: true,
+    category: 'bags',
+  },
+  {
+    id: '7',
+    name: 'Succulent Plant Set',
+    description:
+      'Set of 6 assorted low-maintenance succulents in terracotta pots, perfect for desk or windowsill.',
+    price: 34.0,
+    imageUrl: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=600&q=80',
+    rating: 4.6,
+    reviewCount: 421,
+    inStock: true,
+    category: 'home',
+  },
+  {
+    id: '8',
+    name: 'Hardcover Notebook',
+    description:
+      'A5 dotted hardcover notebook with 240 pages of 100gsm ivory paper, ribbon bookmark, and elastic closure.',
+    price: 22.95,
+    imageUrl: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&q=80',
+    rating: 4.5,
+    reviewCount: 689,
+    inStock: true,
+    category: 'stationery',
+  },
+  {
+    id: '9',
+    name: 'Stainless Steel Water Bottle',
+    description:
+      'Double-wall vacuum insulated bottle that keeps drinks cold 24 hours or hot 12 hours. 750ml capacity.',
+    price: 44.99,
+    imageUrl: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&q=80',
+    rating: 4.7,
+    reviewCount: 1587,
+    inStock: true,
+    category: 'kitchen',
+  },
+  {
+    id: '10',
+    name: 'Polaroid Instant Camera',
+    description:
+      'Retro-style instant film camera with built-in flash, selfie mirror, and automatic exposure control.',
+    price: 99.95,
+    imageUrl: 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=600&q=80',
+    rating: 4.2,
+    reviewCount: 743,
+    inStock: true,
+    category: 'electronics',
+  },
+  {
+    id: '11',
+    name: 'Yoga Mat',
+    description:
+      'Non-slip 6mm thick eco-friendly TPE yoga mat with alignment lines, carrying strap, and moisture resistance.',
+    price: 59.0,
+    imageUrl: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80',
+    rating: 4.5,
+    reviewCount: 1102,
+    inStock: true,
+    category: 'sports',
+  },
+  {
+    id: '12',
+    name: 'Scented Soy Candle',
+    description:
+      'Hand-poured soy wax candle with cotton wick in amber glass jar. 50-hour burn time. Vanilla & cedarwood scent.',
+    price: 28.0,
+    imageUrl: 'https://images.unsplash.com/photo-1602523961358-f9f03dd557db?w=600&q=80',
+    rating: 4.8,
+    reviewCount: 294,
+    inStock: false,
+    category: 'home',
+  },
+];
