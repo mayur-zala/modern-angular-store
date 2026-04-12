@@ -1,5 +1,6 @@
 import { Product } from './models/product-type';
 import { CartItem } from './models/cart-type';
+import { DeliveryInfo, Order } from './models/order-type';
 import {
   patchState,
   signalMethod,
@@ -23,6 +24,7 @@ export type EcommerceState = {
   wishListItems: Product[];
   cartItems: CartItem[];
   user: User | undefined;
+  lastOrder: Order | null;
 };
 
 export const EcommerceStore = signalStore(
@@ -35,6 +37,7 @@ export const EcommerceStore = signalStore(
     wishListItems: [] as Product[],
     cartItems: [] as CartItem[],
     user: {} as User,
+    lastOrder: null as Order | null,
   }),
   withComputed(({ category, products, wishListItems, cartItems }) => ({
     filteredProducts: computed(() => {
@@ -123,12 +126,32 @@ export const EcommerceStore = signalStore(
         });
       },
       proceedToCheckout: () => {
-        matDialog.open(SignInDialog, {
-          disableClose: true,
-          data: {
-            checkout: true,
-          },
-        });
+        if (store.user()?.id) {
+          router.navigate(['/checkout']);
+        } else {
+          matDialog.open(SignInDialog, {
+            disableClose: true,
+            data: { checkout: true },
+          });
+        }
+      },
+      placeOrder: (deliveryInfo: DeliveryInfo) => {
+        const subTotal = Math.round(
+          store.cartItems().reduce((acc, item) => acc + item.product.price * item.quantity, 0),
+        );
+        const tax = Math.round(0.05 * subTotal);
+        const total = subTotal + tax;
+        const order: Order = {
+          orderId: 'ORD-' + Date.now(),
+          items: store.cartItems(),
+          subTotal,
+          tax,
+          total,
+          deliveryInfo,
+        };
+        patchState(store, { lastOrder: order, cartItems: [] });
+        toaster.success('Order placed successfully!');
+        router.navigate(['/order-success']);
       },
       signIn: ({ email, password, checkOut, dialogId }: SignInParams) => {
         patchState(store, {
